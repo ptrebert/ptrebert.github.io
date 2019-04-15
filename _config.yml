@@ -17,8 +17,7 @@ url: "https://ptrebert.github.io"
 github_username:  ptrebert
 
 # Build settings
-markdown: kramdown
-theme: jekyll-theme-midnight
+remote_theme: "mmistakes/so-simple-theme"
 plugins:
   - jekyll-relative-links
   - jekyll-feed
