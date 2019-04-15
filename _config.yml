@@ -16,6 +16,9 @@ baseurl: "/"
 url: "https://ptrebert.github.io"
 github_username:  ptrebert
 
+locale: en-us
+date_format: "%Y-%m-%d"
+
 # Build settings
 remote_theme: "mmistakes/so-simple-theme"
 plugins:
@@ -25,16 +28,12 @@ relative_links:
   enabled: true
   collections: true
 
+search_full_content: false
+
 collections_dir: topics
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
