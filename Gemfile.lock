@@ -255,8 +255,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-pages
-  jekyll-theme-so-simple
+  github-pages (>= 181)
+  jekyll (>= 3.7.3)
+  jekyll-theme-so-simple (>= 3.1.2)
 
 BUNDLED WITH
    2.0.1
