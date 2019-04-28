@@ -9,6 +9,7 @@ source "https://rubygems.org"
 
 gem "jekyll", ">= 3.7.3"
 gem "jekyll-theme-so-simple", ">= 3.1.2"
+gem 'jekyll-target-blank'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
