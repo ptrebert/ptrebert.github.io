@@ -87,7 +87,7 @@ Update the environment: `conda env update -f my-dev-env.yml`
 `conda env remove --name <ENV-NAME>`
 
 ## Remove package from environment
-Uninstall: `conda remove --name <ENV-NAME> <PKG-NAME>`
+Uninstall package: `conda remove --name <ENV-NAME> <PKG-NAME>`
 
 ## Install packages via pip
 Specify install command in the YAML file as follows:
@@ -127,3 +127,47 @@ dependencies:
       - intervaltree
       - git+https://bitbucket.org/whatshap/whatshap@dev-feat-haplotag-region
 ```
+
+## Export Conda environment specification
+
+Why could this be important? Specifying ("pinning") package versions prevents a change/update
+of said package, BUT other packages/libraries not specifically listed in the YAML file can
+nevertheless be changed during `conda env update`. In the worst case, this may break something.
+
+As soon as the work performed in the Conda environment reaches a certain level of
+maturity (e.g., dependencies no longer change), one can export a more comprehensive
+specification of the respective Conda environment via
+`conda env export --name ENV-NAME > my-dev-env.yml`. Obviously, this will overwrite
+`my-dev-env.yml`.
+
+## Setting environment variables
+
+In the top-level directory of the Conda environment (`/envs/my-dev-env/`),
+create the following files and folders:
+
+```text
+mkdir -p ./etc/conda/activate.d
+mkdir -p ./etc/conda/deactivate.d
+touch ./etc/conda/activate.d/env_vars.sh
+touch ./etc/conda/deactivate.d/env_vars.sh
+```
+
+Edit `./etc/conda/activate.d/env_vars.sh` as follows:
+
+```text
+#!/bin/sh
+
+export VAR1=FOO
+export VAR2=BAR
+```
+
+Edit `./etc/conda/deactivate.d/env_vars.sh` as follows:
+
+```text
+#!/bin/sh
+
+unset VAR1
+unset VAR2
+```
+
+NB: Preferred way for handling stuff such as `LD_LIBRARY_PATH` etc.
