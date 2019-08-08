@@ -4,6 +4,9 @@ title: Install MafFilter in Conda environment
 tags: conda how-to sequence-analysis alignment software
 ---
 
+# Note 2019-07
+Install did not succeed on another system. Error message was dubious...
+
 # Setup Conda environment
 
 Specify a Conda env as follows:
