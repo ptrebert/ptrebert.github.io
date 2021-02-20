@@ -9,8 +9,8 @@
 title: Peter Ebert
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A bioinformatician with an interest in (epi-) genomics, reproducible research,
-  Python, and software usability.
+  A bioinformatician with an interest in (epi-) genomics, assembly, structural variation,
+  efficient workflow management, Python, and software usability.
 baseurl: "/"
 url: "https://ptrebert.github.io"
 github_username:  ptrebert
